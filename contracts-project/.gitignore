@@ -1,0 +1,7 @@
+node_modules/
+.env
+artifacts/
+forge-out/
+forge-cache/
+# Foundry binaries are fetched locally (see README) — do not commit ~100MB of binaries
+tools/

@@ -151,4 +151,15 @@ browser exists on this VM, so no screenshot verification — recorded honestly.
 
 ## Addendum — repo push verification
 
-_(Appended after the push in a follow-up commit, with the real outputs.)_
+Verified 19 Nov 2026 after the initial push:
+
+- `gh repo view dunoil/agentseal` → `url=https://github.com/dunoil/agentseal`,
+  `visibility=PUBLIC`, default branch `main`.
+- `git ls-remote origin` → `04eb66190c1f25ad837eb9336a7e958adb5da356` for both
+  `HEAD` and `refs/heads/main` (the initial commit).
+- Fresh clone to a clean directory: `git ls-files` output **identical** to the
+  local repo — **24 files**, trees match exactly.
+- The clone contains **no `.env` file** (find confirms) and no `node_modules`
+  or Foundry `tools/` binaries — the deployer key never left this machine.
+- This addendum itself is delivered in the follow-up commit immediately after
+  the initial push, so the live repo's PROGRESS.md is the complete version.
